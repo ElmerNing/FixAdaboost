@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="AutoInit">
+      <UniqueIdentifier>{ea996076-9ce6-4367-81e0-938018b13169}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IO">
+      <UniqueIdentifier>{762e71f7-647c-467b-8748-756c38b8226a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AdaBoost">
+      <UniqueIdentifier>{b72dabce-79b1-4ea9-a789-e3bc71a70e01}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BoostFileConvert.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoInit\AutoInit.h">
+      <Filter>AutoInit</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\DirectoryX.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\FolderBrowserDlg.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\IO.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\OpenFileDlg.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\PathX.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\FileX.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="AdaBoost\BoostedCommittee.h">
+      <Filter>AdaBoost</Filter>
+    </ClInclude>
+    <ClInclude Include="AdaBoost\IWeakHypothesis.h">
+      <Filter>AdaBoost</Filter>
+    </ClInclude>
+    <ClInclude Include="AdaBoost\Model.h">
+      <Filter>AdaBoost</Filter>
+    </ClInclude>
+    <ClInclude Include="AdaBoost\SampleSet.h">
+      <Filter>AdaBoost</Filter>
+    </ClInclude>
+    <ClInclude Include="AdaBoost\SPHypothesis.h">
+      <Filter>AdaBoost</Filter>
+    </ClInclude>
+    <ClInclude Include="AdaBoost\AdaBoost.h">
+      <Filter>AdaBoost</Filter>
+    </ClInclude>
+    <ClInclude Include="AdaBoost\TrainingSet.h">
+      <Filter>AdaBoost</Filter>
+    </ClInclude>
+    <ClInclude Include="AdaBoost\Training.h">
+      <Filter>AdaBoost</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BoostFileConvert.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoInit\AutoInit.cpp">
+      <Filter>AutoInit</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\DirectoryX.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\FolderBrowserDlg.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\OpenFileDlg.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\PathX.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\FileX.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="AdaBoost\BoostedCommittee.cpp">
+      <Filter>AdaBoost</Filter>
+    </ClCompile>
+    <ClCompile Include="AdaBoost\Model.cpp">
+      <Filter>AdaBoost</Filter>
+    </ClCompile>
+    <ClCompile Include="AdaBoost\SampleSet.cpp">
+      <Filter>AdaBoost</Filter>
+    </ClCompile>
+    <ClCompile Include="AdaBoost\SPHypothesis.cpp">
+      <Filter>AdaBoost</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AdaBoost\TrainingSet.cpp">
+      <Filter>AdaBoost</Filter>
+    </ClCompile>
+    <ClCompile Include="AdaBoost\Training.cpp">
+      <Filter>AdaBoost</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\lib\AdaBoostPredict.lib" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,23 @@
+﻿生成启动时间为 2012-4-26 12:08:37。
+     1>项目“G:\work space of ny\adaboost\FixAdaBoost\Adaboost\AdaBoostPredict\AdaBoostPredict.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug\AdaBoostPredict.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt BoostData\2.c BoostData\5.c BoostPredict.c
+         BoostPredict.c
+         5.c
+         2.c
+         正在生成代码...
+       Lib:
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"..\lib\AdaBoostPredict.lib" /NOLOGO Debug\2.obj
+         Debug\5.obj
+         Debug\BoostPredict.obj
+         AdaBoostPredict.vcxproj -> G:\work space of ny\adaboost\FixAdaBoost\Adaboost\AdaBoostPredict\..\lib\AdaBoostPredict.lib
+       FinalizeBuildStatus:
+         正在删除文件“Debug\AdaBoostPredict.unsuccessfulbuild”。
+         正在对“Debug\AdaBoostPredict.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“G:\work space of ny\adaboost\FixAdaBoost\Adaboost\AdaBoostPredict\AdaBoostPredict.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.84

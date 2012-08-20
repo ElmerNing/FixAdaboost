@@ -1,0 +1,29 @@
+使用说明
+1，	生成样本集。
+	example文件夹中提供了一个生成样本集的例子。直接运行generate.py，将在目录下生成一个名为total.datset的文件，该文件即是样本集。total.datset包含了-1和1两个文件夹中的所有样本，每个样本的标签与文件夹的名字相同（标签目前只支持整数）。在total.datset中，每一行代表一个样本，其格式为[feature1 feature2 feature3 ...... featureN label]。如果需要实现第四步中的定点算法，每一个feature都应当为16位带符号整数。
+ 
+2，	训练训练样本集。
+	运行AdaBoost工程，然后在输入cmd中输入-t，之后会弹出一个文件选择对话框，选择上一步骤生成total.datset文件，等等一定时间后训练完成。训练结果为几个txt文件，保存在_model的文件夹中。
+	AdaBoost训练算法的函数原型如下所示:
+
+	void Training::Train( const TrainingSet& trainset, Model& outModel, int splitNum/*=2*/, int iteration/*=200*/, int negLabel/*=-1*/ )
+	参数trainset -> 待训练央本级
+	参数outModel -> 输出训练完成的一个model
+	参数splitNum -> 决策树弱分类器的分支次数
+	参数negLabel -> 为负样本标签
+	
+	训练过程采用1-vs-all的方式，即把某一类标签当成正样本，其余样本全归负样本，如此进行一次二类分类。生成_model文件夹中，每一个txt文件代表一个二类分类器，其文件名则为该二类分类器正样本的标签。标签为negLabel的样本只充当负样本(一般情况下，标签为nagLabel的样本为一些列随机生成的样本，以此来增加训练生成分类器的性能)。
+
+3，	识别样本集。
+	运行AdaBoost工程，然后在输入cmd中输入-l，选择上一步骤中生成的_model目录，加载model。
+	model加载完成后，输入-p，选择代识别的样本集，进行识别。识别过程中，我们会用model中的每一个二类分类器对一个样本进行识别，当有且仅有一个二类分类器识别为正样本时，我们把该样本预测为该二类分类器对应的正样本标签。最后，cmd会输出正确率，并且会把错误的样本保存在本地，error.datset。
+
+4，	实现嵌入式下的定点算法
+	接下来，运行AdaBoost工程，然后在cmd中输入-c后回车，选择第二步中生成的_model文件夹, 将生成定点的model。对应为几个.c文件和一个.h文件，其中.c文件定义着model转换为定点后的数据，.h文件则为声明。
+		
+	AdaBoostPredict工程中有实现了一个函数使用这几个.c文件和.h文件的方式：
+	
+	该函数原型为：
+	short BoostPredict(short* feature, WeakClassifier* weakClassiFier, short* weight, int weakSize, int splitNum )；
+	
+	参数feature为需要识别的一个样本。剩下的参数在第三步中生成的.h文件中定义。函数将返回 -1或者1 表示 负样本或正样本 。
